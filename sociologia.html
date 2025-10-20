@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrevista com Daniel Jorge – A rotina de um programador</title>
+  <link rel="icon" href="./assets/img/g1_logo.png">
+
+  <style>
+    body {
+      background-color: #f9fafb;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      color: #1f2937;
+    }
+
+    /* ====== Cabeçalho ====== */
+    header {
+      border-bottom: 1px solid #770000;
+      background-color: #b60000;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+
+    .cabecalho-conteudo {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* ====== Conteúdo principal ====== */
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 16px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .subtitulo {
+      font-size: 1.25rem;
+      color: #374151;
+      margin-bottom: 24px;
+    }
+
+    .autor {
+      display: flex;
+      align-items: center;
+      color: #6b7280;
+      font-size: 0.95rem;
+      margin-bottom: 32px;
+    }
+
+    .autor i {
+      margin-right: 8px;
+    }
+
+    figure img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    figcaption {
+      color: #6b7280;
+      font-size: 0.875rem;
+      margin-top: 8px;
+    }
+
+    /* ====== Corpo do artigo ====== */
+    article {
+      font-size: 1rem;
+      color: #1f2937;
+    }
+
+    article p {
+      margin-bottom: 24px;
+    }
+
+    .citacao {
+      position: relative;
+      background-color: #f9fafb;
+      padding: 24px;
+      border-radius: 8px;
+      margin: 32px 0;
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .citacao::before {
+      content: "“";
+      font-size: 5rem;
+      line-height: 1;
+      opacity: 0.2;
+      position: absolute;
+      top: 0;
+      left: 10px;
+    }
+
+    .citacao::after {
+      content: "”";
+      font-size: 5rem;
+      line-height: 1;
+      opacity: 0.2;
+      position: absolute;
+      bottom: 0;
+      right: 10px;
+    }
+
+    .pergunta {
+      font-weight: bold;
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+    }
+
+    /* ====== Rodapé do artigo ====== */
+    .tags {
+      border-top: 1px solid #999999;
+      margin-top: 48px;
+      padding-top: 24px;
+    }
+
+    .tags a {
+      display: inline-block;
+      background-color: #f3f4f6;
+      padding: 6px 12px;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      color: #1f2937;
+      text-decoration: none;
+      margin: 4px 4px 4px 0;
+      transition: background-color 0.3s;
+    }
+
+    .tags a:hover {
+      background-color: #e5e7eb;
+    }
+
+    .compartilhar {
+      display: flex;
+      align-items: center;
+      margin-top: 16px;
+      margin-bottom: 32px;
+      color: #374151;
+    }
+
+    .compartilhar i {
+      margin-left: 12px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .compartilhar i:hover {
+      transform: scale(1.2);
+    }
+
+    .leia-tambem {
+      margin-bottom: 32px;
+    }
+
+    .leia-tambem h3 {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+    }
+
+    .leia-tambem a {
+      display: block;
+      color: #dc2626;
+      text-decoration: none;
+      margin-bottom: 8px;
+    }
+
+    .leia-tambem a:hover {
+      text-decoration: underline;
+    }
+
+    /* ====== Rodapé do site ====== */
+    footer {
+      background-color: #ffffff;
+      border-top: 1px solid #868686;
+      padding: 32px 16px;
+      font-size: 0.95rem;
+    }
+
+    .rodape-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .rodape-grade {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    footer h4 {
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    footer a {
+      color: #45494e;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: #dc2626;
+    }
+
+    .rodape-final {
+      text-align: center;
+      padding-top: 16px;
+      color: #6b7280;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <div class="cabecalho-conteudo">
+      <div class="logo-nav">
+        <a href="https://g1.globo.com">
+          <img src="./assets/img/g1_logo.png" alt="Logo G1" height="32">
+        </a>
+      </div>
+    </div>    
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <div>
+      <span style="color:#dc2626; font-weight:bold;">ENTREVISTA</span>
+      <span style="color:#6b7280;"> • EXCLUSIVO</span>
+    </div>
+
+    <h1>“Minha principal função é desenvolver projetos de automatização dos processos contábeis”, diz Daniel Jorge, profissional de tecnologia e finanças</h1>
+    <p class="subtitulo">Daniel Jorge, especialista em processos globais, fala sobre sua rotina, desafios e dicas para quem quer seguir carreira em tecnologia e contabilidade.</p>
+
+    <div class="autor">
+      <span>👤 Por Danilo Jorge</span>
+      <span style="margin-left:16px;">🕓 10/10/2025</span>
+      <span style="margin-left:16px;">👩‍🏫 Professora Ivonete</span>
+    </div>
+
+    <figure>
+      <img src="./assets/img/banner.png" alt="Banner programador">
+      <figcaption>Foto: Simulação de um programador trabalhando em seu código.</figcaption>
+    </figure>
+
+    <article>
+
+      <p>Hoje, o portal apresenta uma entrevista especial com <b>Daniel Jorge</b>, um profissional que atua na área de tecnologia e finanças há mais de 20 anos. Nesta conversa, ele compartilha um pouco de sua trajetória, os desafios do dia a dia e como a combinação entre contabilidade e programação o levou a uma carreira sólida e repleta de aprendizados.</p>
+
+      <p>Durante a entrevista, Daniel fala com clareza e entusiasmo sobre o que o motiva, suas experiências acadêmicas e profissionais, além de dar conselhos valiosos para quem deseja seguir um caminho parecido. A seguir, você confere o bate-papo completo, realizado pessoalmente, com duração de aproximadamente 30 minutos.</p>
+
+      <p><i>Confira a entrevista na íntegra abaixo:</i></p>
+
+      <div>
+        <p><b>Entrevistador:</b> Vamos começar falando um pouco sobre sua trajetória, Daniel.</p>
+
+        <p class="pergunta">1) Por que escolheu essa profissão?</p>
+        <p>Porque essa profissão envolve dois temas que eu gosto e tenho afinidade: contabilidade/finanças e tecnologia.</p>
+
+        <p class="pergunta">2) Que pessoas ou situações influenciaram a seguir a área de programação?</p>
+        <p>Aprendi lógica de programação na faculdade há 25 anos. Após isso, trabalhei por alguns anos no início da minha carreira com sistemas desenvolvidos em Delphi 6 com banco de dados SQL Server. Atualmente, trabalho com outras tecnologias, como PowerBi, Python, Outsystem e inteligência artificial.</p>
+
+        <p class="pergunta">3) Que escola teve que cursar para chegar nessa profissão?</p>
+        <p>Sou graduado em duas faculdades: Engenharia de controle e automação e Ciências Contábeis.</p>
+
+        <p class="pergunta">4) Onde existem escolas para esses cursos e quais as matérias do curso?</p>
+        <p>Estudei na faculdade em Campinas e em Valinhos. As matérias foram:
+          <ul>
+            <li><b>Engenharia:</b> Lógica de programação, Programação de computadores</li>
+            <li><b>Ciências Contábeis:</b> Contabilidade básica, intermediária e avançada</li>
+          </ul>
+        </p>
+
+        <p class="pergunta">5) Quais as condições de ingresso nessas escolas?</p>
+        <p>Vestibular.</p>
+
+        <p class="pergunta">6) Fez estágio durante o curso? O que teve que fazer para conseguir o estágio?</p>
+        <p>Sim, somente no curso de Engenharia. Fiz no departamento de manutenção eletrônica, onde eu tinha que programar CLP’s (controlador lógico programável) que automatizam as máquinas da produção. O programa utilizado era o Ladder.</p>
+
+        <p class="pergunta">7) Como conseguiu chegar ao emprego atual?</p>
+        <p>Através da minha experiência nas atividades anteriores e das minhas graduações. Tive que fazer algumas entrevistas, provas, dinâmicas e apresentações para conseguir a vaga.</p>
+
+        <p class="pergunta">8) Que funções exerce atualmente no emprego?</p>
+        <p>Minha principal função é desenvolver projetos de automatização dos processos contábeis, utilizando ferramentas como PowerBi, Python, Outsystem e inteligência artificial.</p>
+
+        <p class="pergunta">9) Qual é a faixa salarial de quem trabalha nessa área?</p>
+        <p>Entre 10 e 20 mil reais.</p>
+
+        <p class="pergunta">10) Atualmente existe muita procura dessa profissão? Que vantagens e desvantagens você vê na sua opinião?</p>
+        <p>Não é uma profissão muito procurada, pois envolve tecnologia, contabilidade e inglês fluente. A vantagem é que há pouca concorrência, tornando a posição mais segura. Também permite contato com pessoas ao redor do mundo e rotina de trabalho dinâmica. A desvantagem é que várias reuniões acontecem de madrugada devido ao fuso horário, principalmente com pessoas da China, Índia e Vietnã.</p>
+
+        <p class="pergunta">11) Nessa profissão, em que lugares e tipos de empresas pode-se trabalhar?</p>
+        <p>Principalmente em empresas de grande porte multinacionais.</p>
+
+        <p class="pergunta">12) Quais são as qualificações exigidas para seguir nessa área?</p>
+        <p>Conhecimento em tecnologia, contabilidade e inglês.</p>
+
+        <p class="pergunta">13) Descreva um dia de seu trabalho: horários, exigências e tudo mais.</p>
+        <p>Frequentemente inicio meu dia respondendo e-mails, e no período da manhã participo de reuniões sobre os projetos em desenvolvimento. À tarde, foco em trabalhar diretamente nos projetos.</p>
+
+        <p class="pergunta">14) O que recomendaria para quem deseja seguir nessa carreira?</p>
+        <p>Estudar bastante, fazer faculdade na área, aprender inglês e estar sempre antenado às mudanças tecnológicas.</p>
+
+        <p class="pergunta">15) Quantos anos são necessários para se concluir esse curso e conseguir uma boa colocação profissional?</p>
+        <p>São 4 ou 5 anos de graduação. Cursos específicos podem ser feitos simultaneamente. Na empresa, geralmente são necessários cerca de 10 anos para chegar à posição atual.</p>
+
+        <p class="pergunta">16) Quais são as etapas para se tornar um profissional como você?</p>
+        <p>
+          a) Fazer graduação<br>
+          b) Fazer cursos específicos técnicos<br>
+          c) Aprender inglês<br>
+          d) Começar na empresa e focar em soluções inovadoras usando as ferramentas tecnológicas disponíveis no mercado adotadas pela empresa.
+        </p>
+
+        <p>
+        Durante a realização desta entrevista, pude compreender melhor as vantagens e desvantagens da profissão de programador. Entre as vantagens, destacam-se a possibilidade de trabalhar com tecnologia de ponta, resolver problemas de forma criativa e ter oportunidades em empresas de diversos países. As principais desvantagens estão relacionadas à rotina intensa e à necessidade constante de atualização, já que as linguagens e ferramentas mudam rapidamente. Mesmo assim, essa experiência só reforçou ainda mais minha vontade de seguir essa carreira, pois percebi que é uma área que realmente me fascina e combina com o que eu gosto de fazer — lidar com desafios, aprender sempre e usar a tecnologia para transformar ideias em soluções reais.
+        </p>
+      </div>
+    </article>
+
+    <p>Essa entrevista foi realizada para fins educativos.</p>
+
+    <div class="tags">
+      <a href="#">#Entrevista</a>
+      <a href="#">#Programacao</a>
+      <a href="#">#Profissoes</a>
+      <a href="#">#Tecnologia</a>
+
+
+      <div class="leia-tambem">
+        <h3>Descubra novos sites</h3>
+        <a href="https://victoro04.github.io/Derbox">Novo site de avaliações online feita por uma equipe do Senai - DerBox</a>
+        <a href="https://danilojorge12.github.io/Aprendendo-Historia">Novo site de estudos para História - Aprendendo Historia</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="rodape-container">
+      <div class="rodape-grade">
+      <div class="rodape-final">
+        © 2025 Danilo Jorge e Professora Ivonete - Todos os direitos reservados
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
