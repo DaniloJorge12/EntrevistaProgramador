@@ -1,0 +1,221 @@
+    body {
+      background-color: #f9fafb;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      color: #1f2937;
+    }
+
+    /* ====== Cabeçalho ====== */
+    header {
+      border-bottom: 1px solid #770000;
+      background-color: #b60000;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+
+    .cabecalho-conteudo {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* ====== Conteúdo principal ====== */
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 16px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .subtitulo {
+      font-size: 1.25rem;
+      color: #374151;
+      margin-bottom: 24px;
+    }
+
+    .autor {
+      display: flex;
+      align-items: center;
+      color: #6b7280;
+      font-size: 0.95rem;
+      margin-bottom: 32px;
+    }
+
+    .autor i {
+      margin-right: 8px;
+    }
+
+    figure img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    figcaption {
+      color: #6b7280;
+      font-size: 0.875rem;
+      margin-top: 8px;
+    }
+
+    /* ====== Corpo do artigo ====== */
+    article {
+      font-size: 1rem;
+      color: #1f2937;
+    }
+
+    article p {
+      margin-bottom: 24px;
+    }
+
+    .citacao {
+      position: relative;
+      background-color: #f9fafb;
+      padding: 24px;
+      border-radius: 8px;
+      margin: 32px 0;
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .citacao::before {
+      content: "“";
+      font-size: 5rem;
+      line-height: 1;
+      opacity: 0.2;
+      position: absolute;
+      top: 0;
+      left: 10px;
+    }
+
+    .citacao::after {
+      content: "”";
+      font-size: 5rem;
+      line-height: 1;
+      opacity: 0.2;
+      position: absolute;
+      bottom: 0;
+      right: 10px;
+    }
+
+    .pergunta {
+      font-weight: bold;
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+    }
+
+    /* ====== Rodapé do artigo ====== */
+    .tags {
+      border-top: 1px solid #999999;
+      margin-top: 48px;
+      padding-top: 24px;
+    }
+
+    .tags a {
+      display: inline-block;
+      background-color: #f3f4f6;
+      padding: 6px 12px;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      color: #1f2937;
+      text-decoration: none;
+      margin: 4px 4px 4px 0;
+      transition: background-color 0.3s;
+    }
+
+    .tags a:hover {
+      background-color: #e5e7eb;
+    }
+
+    .compartilhar {
+      display: flex;
+      align-items: center;
+      margin-top: 16px;
+      margin-bottom: 32px;
+      color: #374151;
+    }
+
+    .compartilhar i {
+      margin-left: 12px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .compartilhar i:hover {
+      transform: scale(1.2);
+    }
+
+    .leia-tambem {
+      margin-bottom: 32px;
+    }
+
+    .leia-tambem h3 {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+    }
+
+    .leia-tambem a {
+      display: block;
+      color: #dc2626;
+      text-decoration: none;
+      margin-bottom: 8px;
+    }
+
+    .leia-tambem a:hover {
+      text-decoration: underline;
+    }
+
+    /* ====== Rodapé do site ====== */
+    footer {
+      background-color: #ffffff;
+      border-top: 1px solid #868686;
+      padding: 32px 16px;
+      font-size: 0.95rem;
+    }
+
+    .rodape-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .rodape-grade {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    footer h4 {
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    footer a {
+      color: #45494e;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: #dc2626;
+    }
+
+    .rodape-final {
+      text-align: center;
+      padding-top: 16px;
+      color: #6b7280;
+    }
